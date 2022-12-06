@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#clock {
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #79cbb8;
+
+    border-radius: 50%;
+}
+
+.clock__arrays-wrapper {
+    width: 100%;
+    transform: rotate(0.75turn);
+}
+
+.clock__array {
+    position: relative;
+    width: 100%;
+}
+.clock__array::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    top: auto;
+    left: 50%;
+    background-color: #500472;
+
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+
+    transform: translate(0, -50%);
+}
+.clock__array--hour::after {
+    height: 10px;
+}
+.clock__array--minute::after {
+    height: 5px;
+}
+.clock__array--second::after {
+    height: 1px;
+    background-color: #000;
+}
